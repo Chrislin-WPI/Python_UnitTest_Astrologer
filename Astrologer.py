@@ -32,8 +32,13 @@ def get_each_number(number: int) -> []:
     ex get_each_number(1920) 
     return [1,9,2,0]
     """
-
-    result = [1,2,3]
+    result=[]
+    while (number > 0):
+        result.append(int(number%10))
+        number//=10
+        if number ==0:
+            break   
+    result.reverse()
 
     return result
 
